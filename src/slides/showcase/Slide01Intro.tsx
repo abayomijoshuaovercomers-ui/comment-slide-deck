@@ -24,7 +24,7 @@ export default function Slide01Intro() {
         
         {/* Main title */}
         <h1 className="text-7xl font-bold tracking-tight text-white mb-4 drop-shadow-lg">
-          Lovable<span className="text-white/90">Slides</span>
+          Overra<span className="text-white/90"> AI</span>
         </h1>
         
         <p className="text-2xl text-white/90 font-light max-w-2xl mb-12 drop-shadow-md">

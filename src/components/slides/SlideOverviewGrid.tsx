@@ -76,7 +76,7 @@ export function SlideOverviewGrid({
                       </div>
                     </TooltipTrigger>
                     <TooltipContent side="top">
-                      <p className="text-xs">Awaiting Lovable update</p>
+                      <p className="text-xs">Awaiting Overra AI update</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
