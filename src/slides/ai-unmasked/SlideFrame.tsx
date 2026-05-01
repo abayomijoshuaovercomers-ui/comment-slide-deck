@@ -21,7 +21,7 @@ export function SlideFrame({
   children,
   variant = 'dark',
   index,
-  total = 20,
+  total = 23,
   eyebrow,
   className,
 }: SlideFrameProps) {

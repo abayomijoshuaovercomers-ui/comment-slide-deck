@@ -4,7 +4,7 @@ import { SlideFrame } from './SlideFrame';
 const steps = [
   { n: '01', t: 'Define the problem' },
   { n: '02', t: 'Use AI to solve it' },
-  { n: '03', t: 'Build it with Lovable' },
+  { n: '03', t: 'Build it with Overra AI' },
 ];
 
 export default function Slide15ProjectSteps() {

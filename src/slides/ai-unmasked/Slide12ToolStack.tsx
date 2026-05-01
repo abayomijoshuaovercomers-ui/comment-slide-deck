@@ -15,7 +15,7 @@ const stack = [
   {
     label: 'Builder',
     desc: 'Ship product. Fast.',
-    tools: ['Lovable', 'GitHub Copilot'],
+    tools: ['Overra AI', 'GitHub Copilot'],
   },
 ];
 

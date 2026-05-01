@@ -10,7 +10,7 @@ const lines = [
 
 export default function Slide20Closing() {
   return (
-    <SlideFrame index={20} eyebrow="Closing">
+    <SlideFrame index={23} eyebrow="Closing">
       <div className="flex h-full px-20 py-32 items-center gap-20">
         <div className="flex-1">
           {lines.map((l, i) => (
