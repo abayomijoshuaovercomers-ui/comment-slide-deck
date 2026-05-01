@@ -18,6 +18,9 @@ import Slide17CareerPaths from './Slide17CareerPaths';
 import Slide18FutureTruth from './Slide18FutureTruth';
 import Slide19FinalImpact from './Slide19FinalImpact';
 import Slide20Closing from './Slide20Closing';
+import Slide21PromptAnatomy from './Slide21PromptAnatomy';
+import Slide22ThirtyTasks from './Slide22ThirtyTasks';
+import Slide23TalkToModels from './Slide23TalkToModels';
 
 export const aiUnmaskedSlides = [
   { component: Slide01Title, name: 'Title', template: 'title' },
@@ -39,5 +42,8 @@ export const aiUnmaskedSlides = [
   { component: Slide17CareerPaths, name: 'Career Paths', template: 'three-up' },
   { component: Slide18FutureTruth, name: 'Future Truth', template: 'list' },
   { component: Slide19FinalImpact, name: 'Final Impact', template: 'statement' },
+  { component: Slide21PromptAnatomy, name: 'Anatomy of a Prompt', template: 'grid' },
+  { component: Slide22ThirtyTasks, name: '30 AI Tasks & Tools', template: 'list' },
+  { component: Slide23TalkToModels, name: 'Talk to Models', template: 'comparison' },
   { component: Slide20Closing, name: 'Closing', template: 'closing' },
 ];
