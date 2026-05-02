@@ -16,7 +16,7 @@ export function LovableFrame({
   children,
   variant = 'light',
   index,
-  total = 22,
+  total = 24,
   eyebrow,
   className,
 }: LovableFrameProps) {
