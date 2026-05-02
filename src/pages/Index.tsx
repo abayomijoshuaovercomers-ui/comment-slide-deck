@@ -9,7 +9,10 @@ import { PresenterView } from '@/components/slides/PresenterView';
 import { PresenterNotesPanel } from '@/components/slides/PresenterNotesPanel';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { aiUnmaskedSlides as showcaseSlides } from '@/slides/ai-unmasked';
+import { aiUnmaskedSlides } from '@/slides/ai-unmasked';
+import { lovable101Slides } from '@/slides/lovable-101';
+
+const showcaseSlides = [...aiUnmaskedSlides, ...lovable101Slides];
 
 interface SlideData {
   id: string;
