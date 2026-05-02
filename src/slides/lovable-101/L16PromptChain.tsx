@@ -1,5 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LovableFrame } from './LovableFrame';
+import { CopyablePromptBox } from './CopyablePromptBox';
+import { Copy, Check } from 'lucide-react';
+
+function CopyChip({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      type="button"
+      onClick={async (e) => {
+        e.stopPropagation();
+        try {
+          await navigator.clipboard.writeText(text);
+          setCopied(true);
+          setTimeout(() => setCopied(false), 1400);
+        } catch {}
+      }}
+      className={`shrink-0 flex items-center gap-1 px-2 py-1 rounded ${
+        copied ? 'bg-slide-accent text-white' : 'bg-slide-gray-100 text-slide-gray-600 hover:bg-slide-gray-200'
+      }`}
+      style={{ fontSize: '11px', fontWeight: 700 }}
+      title="Copy this refinement prompt"
+    >
+      {copied ? <Check size={11} /> : <Copy size={11} />}
+      <span>{copied ? 'Copied' : 'Copy'}</span>
+    </button>
+  );
+}
 
 const FIRST = `Build "GraceNotes" — a sermon archive for my church.
 Cream bg, burgundy accent, serif headings.
