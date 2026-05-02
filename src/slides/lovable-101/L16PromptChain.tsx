@@ -1,5 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LovableFrame } from './LovableFrame';
+import { CopyablePromptBox } from './CopyablePromptBox';
+import { Copy, Check } from 'lucide-react';
+
+function CopyChip({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      type="button"
+      onClick={async (e) => {
+        e.stopPropagation();
+        try {
+          await navigator.clipboard.writeText(text);
+          setCopied(true);
+          setTimeout(() => setCopied(false), 1400);
+        } catch {}
+      }}
+      className={`shrink-0 flex items-center gap-1 px-2 py-1 rounded ${
+        copied ? 'bg-slide-accent text-white' : 'bg-slide-gray-100 text-slide-gray-600 hover:bg-slide-gray-200'
+      }`}
+      style={{ fontSize: '11px', fontWeight: 700 }}
+      title="Copy this refinement prompt"
+    >
+      {copied ? <Check size={11} /> : <Copy size={11} />}
+      <span>{copied ? 'Copied' : 'Copy'}</span>
+    </button>
+  );
+}
 
 const FIRST = `Build "GraceNotes" — a sermon archive for my church.
 Cream bg, burgundy accent, serif headings.
@@ -36,7 +63,7 @@ const FOLLOWUPS = [
 
 export default function L16PromptChain() {
   return (
-    <LovableFrame index={20} eyebrow="Anatomy of a Real Build">
+    <LovableFrame index={22} eyebrow="Anatomy of a Real Build">
       <div className="flex flex-col h-full px-16 pt-28 pb-16">
         <h2 className="text-slide-gray-900 mb-2" style={{ fontSize: '52px', fontWeight: 800, lineHeight: 1 }}>
           The exact <span className="text-slide-accent">prompt chain.</span>
@@ -46,22 +73,17 @@ export default function L16PromptChain() {
         </p>
 
         <div className="grid grid-cols-[1fr_1.4fr] gap-6 flex-1 min-h-0">
-          {/* First prompt */}
-          <div className="bg-[hsl(220_25%_8%)] text-white p-6 flex flex-col">
+          {/* First prompt — copyable */}
+          <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-3">
               <span className="h-2 w-2 rounded-full bg-slide-accent" />
               <span className="text-slide-accent uppercase tracking-[0.25em]" style={{ fontSize: '13px', fontWeight: 700 }}>
                 Prompt 01 · The Foundation
               </span>
             </div>
-            <pre
-              className="whitespace-pre-wrap text-white/90 flex-1"
-              style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '15px', lineHeight: 1.5 }}
-            >
-{FIRST}
-            </pre>
-            <div className="mt-4 pt-4 border-t border-white/10 text-white/60" style={{ fontSize: '13px', lineHeight: 1.4 }}>
-              💡 First prompts are <span className="text-white">long</span> on purpose.
+            <CopyablePromptBox prompt={FIRST} size="md" className="flex-1" />
+            <div className="mt-3 px-1 text-slide-gray-600" style={{ fontSize: '13px', lineHeight: 1.4 }}>
+              💡 First prompts are <span className="text-slide-gray-900 font-semibold">long</span> on purpose.
               Name the problem, list the pages, name the colors, name the database.
               Lovable rewards specificity.
             </div>
@@ -82,9 +104,12 @@ export default function L16PromptChain() {
                     {String(i + 2).padStart(2, '0')}
                   </span>
                   <div className="flex-1 min-w-0">
-                    <p className="text-slide-gray-900 mb-1" style={{ fontSize: '14px', fontWeight: 500, lineHeight: 1.35 }}>
-                      {f.p}
-                    </p>
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <p className="text-slide-gray-900" style={{ fontSize: '14px', fontWeight: 500, lineHeight: 1.35 }}>
+                        {f.p}
+                      </p>
+                      <CopyChip text={f.p.replace(/^"|"$/g, '')} />
+                    </div>
                     <p className="text-slide-accent" style={{ fontSize: '12px', fontFamily: 'IBM Plex Mono, monospace' }}>
                       → {f.r}
                     </p>

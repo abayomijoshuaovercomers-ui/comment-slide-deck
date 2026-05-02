@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Copy, Check } from 'lucide-react';
 import lovableLogo from '@/assets/lovable-logo.png';
 
 /**
@@ -14,6 +15,16 @@ interface Props {
 }
 
 export function LovableScreenshot({ prompt, aiReply, preview, url = 'preview.lovable.app', caption }: Props) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    try {
+      await navigator.clipboard.writeText(prompt);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1600);
+    } catch {}
+  };
+
   return (
     <div className="w-full h-full flex flex-col bg-[hsl(220_25%_8%)] border border-white/10 shadow-2xl overflow-hidden">
       {/* Window chrome */}
@@ -39,16 +50,30 @@ export function LovableScreenshot({ prompt, aiReply, preview, url = 'preview.lov
             Chat
           </div>
           <div className="flex-1 overflow-hidden p-5 space-y-4">
-            {/* User prompt bubble */}
+            {/* User prompt bubble — click to copy */}
             <div className="flex justify-end">
-              <div className="max-w-[92%] bg-slide-accent text-white px-5 py-4 rounded-2xl rounded-br-sm">
+              <button
+                type="button"
+                onClick={handleCopy}
+                title="Click to copy this prompt"
+                className="max-w-[92%] bg-slide-accent text-white px-5 py-4 rounded-2xl rounded-br-sm text-left relative cursor-pointer"
+              >
+                <div
+                  className={`absolute top-2 right-2 flex items-center gap-1 px-2 py-0.5 rounded ${
+                    copied ? 'bg-white text-slide-accent' : 'bg-white/15 text-white/90'
+                  }`}
+                  style={{ fontSize: '11px', fontWeight: 700 }}
+                >
+                  {copied ? <Check size={11} /> : <Copy size={11} />}
+                  <span>{copied ? 'Copied' : 'Copy'}</span>
+                </div>
                 <pre
-                  className="whitespace-pre-wrap"
+                  className="whitespace-pre-wrap pr-16"
                   style={{ fontFamily: 'IBM Plex Sans, sans-serif', fontSize: '17px', lineHeight: 1.4, fontWeight: 500 }}
                 >
 {prompt}
                 </pre>
-              </div>
+              </button>
             </div>
 
             {/* AI reply bubble */}

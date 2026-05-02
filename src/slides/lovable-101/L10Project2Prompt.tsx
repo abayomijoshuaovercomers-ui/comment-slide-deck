@@ -1,5 +1,6 @@
 import React from 'react';
 import { LovableFrame } from './LovableFrame';
+import { CopyablePromptBox } from './CopyablePromptBox';
 
 const PROMPT = `Build "TaskFlow", a personal task manager.
 
@@ -27,20 +28,10 @@ Inter font. Feel like Linear meets a Moleskine notebook.`;
 
 export default function L10Project2Prompt() {
   return (
-    <LovableFrame index={10} eyebrow="Project 02 · The Prompt">
+    <LovableFrame index={14} eyebrow="Project 02 · The Prompt">
       <div className="flex h-full px-20 pt-32 pb-24 gap-10">
         <div className="flex-[1.3] flex flex-col">
-          <p className="text-slide-gray-600 uppercase tracking-[0.3em] mb-4" style={{ fontSize: '20px', fontWeight: 600 }}>
-            One prompt. Whole app.
-          </p>
-          <div className="flex-1 bg-[hsl(220_25%_8%)] p-10 overflow-hidden">
-            <pre
-              className="text-white/90 whitespace-pre-wrap"
-              style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '21px', lineHeight: 1.45 }}
-            >
-{PROMPT}
-            </pre>
-          </div>
+          <CopyablePromptBox prompt={PROMPT} size="lg" label="One prompt. Whole app. — click to copy" className="flex-1" />
         </div>
 
         <div className="w-[480px] shrink-0 flex flex-col gap-5">

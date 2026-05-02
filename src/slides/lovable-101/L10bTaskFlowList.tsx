@@ -68,7 +68,7 @@ function TasksPreview() {
 
 export default function L10bTaskFlowList() {
   return (
-    <LovableFrame index={13} eyebrow="Project 02 · The UI">
+    <LovableFrame index={16} eyebrow="Project 02 · The UI">
       <div className="flex flex-col h-full px-16 pt-28 pb-20">
         <h2 className="text-slide-gray-900 mb-6" style={{ fontSize: '52px', fontWeight: 800, lineHeight: 1 }}>
           Describe the screen. <span className="text-slide-accent">Get the screen.</span>

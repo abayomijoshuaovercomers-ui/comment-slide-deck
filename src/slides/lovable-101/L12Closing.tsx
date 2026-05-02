@@ -4,7 +4,7 @@ import lovableLogo from '@/assets/lovable-logo.png';
 
 export default function L12Closing() {
   return (
-    <LovableFrame index={22} eyebrow="Your Move" variant="dark">
+    <LovableFrame index={24} eyebrow="Your Move" variant="dark">
       <div className="flex flex-col h-full px-20 py-28 justify-center">
         <img
           src={lovableLogo}

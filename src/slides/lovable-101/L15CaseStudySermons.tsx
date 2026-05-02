@@ -96,7 +96,7 @@ function SermonsPreview() {
 
 export default function L15CaseStudySermons() {
   return (
-    <LovableFrame index={19} eyebrow="Case Study · Community Need">
+    <LovableFrame index={21} eyebrow="Case Study · Community Need">
       <div className="flex flex-col h-full px-16 pt-28 pb-20">
         <div className="flex items-end justify-between mb-5">
           <div className="max-w-[60%]">

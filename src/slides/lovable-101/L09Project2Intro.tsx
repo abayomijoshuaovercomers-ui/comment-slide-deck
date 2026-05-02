@@ -3,7 +3,7 @@ import { LovableFrame } from './LovableFrame';
 
 export default function L09Project2Intro() {
   return (
-    <LovableFrame index={9} eyebrow="Project 02" variant="dark">
+    <LovableFrame index={13} eyebrow="Project 02" variant="dark">
       <div className="flex h-full px-20 py-32 items-center gap-20">
         <div className="flex-1">
           <span className="text-slide-accent uppercase tracking-[0.4em]" style={{ fontSize: '22px', fontWeight: 600 }}>

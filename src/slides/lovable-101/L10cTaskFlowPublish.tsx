@@ -54,7 +54,7 @@ function PublishedPreview() {
 
 export default function L10cTaskFlowPublish() {
   return (
-    <LovableFrame index={14} eyebrow="Project 02 · Ship it">
+    <LovableFrame index={17} eyebrow="Project 02 · Ship it">
       <div className="flex flex-col h-full px-16 pt-28 pb-20">
         <h2 className="text-slide-gray-900 mb-6" style={{ fontSize: '52px', fontWeight: 800, lineHeight: 1 }}>
           One more prompt. <span className="text-slide-accent">Then publish.</span>
