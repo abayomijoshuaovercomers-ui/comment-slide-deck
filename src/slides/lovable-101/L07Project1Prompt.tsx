@@ -1,5 +1,6 @@
 import React from 'react';
 import { LovableFrame } from './LovableFrame';
+import { CopyablePromptBox } from './CopyablePromptBox';
 
 const PROMPT = `Build a personal portfolio website for Abayomi Joshua,
 an AI educator and speaker.
@@ -27,17 +28,7 @@ export default function L07Project1Prompt() {
     <LovableFrame index={7} eyebrow="Project 01 · The Prompt">
       <div className="flex h-full px-20 pt-32 pb-24 gap-12">
         <div className="flex-1 flex flex-col">
-          <p className="text-slide-gray-600 uppercase tracking-[0.3em] mb-4" style={{ fontSize: '20px', fontWeight: 600 }}>
-            What I typed
-          </p>
-          <div className="flex-1 bg-[hsl(220_25%_8%)] p-10 overflow-hidden">
-            <pre
-              className="text-white/90 whitespace-pre-wrap"
-              style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '22px', lineHeight: 1.5 }}
-            >
-{PROMPT}
-            </pre>
-          </div>
+          <CopyablePromptBox prompt={PROMPT} size="lg" label="What I typed — click to copy" className="flex-1" />
         </div>
 
         <div className="w-[560px] shrink-0 flex flex-col">
