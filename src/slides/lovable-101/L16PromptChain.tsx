@@ -73,22 +73,17 @@ export default function L16PromptChain() {
         </p>
 
         <div className="grid grid-cols-[1fr_1.4fr] gap-6 flex-1 min-h-0">
-          {/* First prompt */}
-          <div className="bg-[hsl(220_25%_8%)] text-white p-6 flex flex-col">
+          {/* First prompt — copyable */}
+          <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-3">
               <span className="h-2 w-2 rounded-full bg-slide-accent" />
               <span className="text-slide-accent uppercase tracking-[0.25em]" style={{ fontSize: '13px', fontWeight: 700 }}>
                 Prompt 01 · The Foundation
               </span>
             </div>
-            <pre
-              className="whitespace-pre-wrap text-white/90 flex-1"
-              style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '15px', lineHeight: 1.5 }}
-            >
-{FIRST}
-            </pre>
-            <div className="mt-4 pt-4 border-t border-white/10 text-white/60" style={{ fontSize: '13px', lineHeight: 1.4 }}>
-              💡 First prompts are <span className="text-white">long</span> on purpose.
+            <CopyablePromptBox prompt={FIRST} size="md" className="flex-1" />
+            <div className="mt-3 px-1 text-slide-gray-600" style={{ fontSize: '13px', lineHeight: 1.4 }}>
+              💡 First prompts are <span className="text-slide-gray-900 font-semibold">long</span> on purpose.
               Name the problem, list the pages, name the colors, name the database.
               Lovable rewards specificity.
             </div>
