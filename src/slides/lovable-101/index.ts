@@ -14,6 +14,10 @@ import L10Project2Prompt from './L10Project2Prompt';
 import L10aTaskFlowAuth from './L10aTaskFlowAuth';
 import L10bTaskFlowList from './L10bTaskFlowList';
 import L10cTaskFlowPublish from './L10cTaskFlowPublish';
+import L13ThinkLikeBuilder from './L13ThinkLikeBuilder';
+import L14CaseStudyTutor from './L14CaseStudyTutor';
+import L15CaseStudySermons from './L15CaseStudySermons';
+import L16PromptChain from './L16PromptChain';
 import L11DosDonts from './L11DosDonts';
 import L12Closing from './L12Closing';
 
@@ -34,6 +38,10 @@ export const lovable101Slides = [
   { component: L10aTaskFlowAuth, name: 'Project 2 · Auth Screenshot', template: 'screenshot' },
   { component: L10bTaskFlowList, name: 'Project 2 · List Screenshot', template: 'screenshot' },
   { component: L10cTaskFlowPublish, name: 'Project 2 · Publish', template: 'screenshot' },
+  { component: L13ThinkLikeBuilder, name: 'Think Like a Builder', template: 'grid' },
+  { component: L14CaseStudyTutor, name: 'Case Study · TutorLink', template: 'screenshot' },
+  { component: L15CaseStudySermons, name: 'Case Study · GraceNotes', template: 'screenshot' },
+  { component: L16PromptChain, name: 'Prompt Chain · Refinements', template: 'list' },
   { component: L11DosDonts, name: "Do's & Don'ts", template: 'comparison' },
   { component: L12Closing, name: 'Closing', template: 'closing' },
 ];
