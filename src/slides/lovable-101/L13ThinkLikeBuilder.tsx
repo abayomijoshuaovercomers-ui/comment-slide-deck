@@ -30,7 +30,7 @@ const STEPS = [
 
 export default function L13ThinkLikeBuilder() {
   return (
-    <LovableFrame index={17} eyebrow="The Builder's Mindset">
+    <LovableFrame index={19} eyebrow="The Builder's Mindset">
       <div className="flex flex-col h-full px-16 pt-28 pb-20">
         <h2 className="text-slide-gray-900 mb-3" style={{ fontSize: '60px', fontWeight: 800, lineHeight: 1 }}>
           Think like a <span className="text-slide-accent">builder</span>.

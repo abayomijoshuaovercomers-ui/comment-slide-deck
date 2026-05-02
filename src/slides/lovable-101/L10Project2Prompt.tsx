@@ -28,7 +28,7 @@ Inter font. Feel like Linear meets a Moleskine notebook.`;
 
 export default function L10Project2Prompt() {
   return (
-    <LovableFrame index={10} eyebrow="Project 02 · The Prompt">
+    <LovableFrame index={14} eyebrow="Project 02 · The Prompt">
       <div className="flex h-full px-20 pt-32 pb-24 gap-10">
         <div className="flex-[1.3] flex flex-col">
           <CopyablePromptBox prompt={PROMPT} size="lg" label="One prompt. Whole app. — click to copy" className="flex-1" />

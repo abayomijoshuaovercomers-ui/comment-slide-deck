@@ -86,7 +86,7 @@ function TutorListPreview() {
 
 export default function L14CaseStudyTutor() {
   return (
-    <LovableFrame index={18} eyebrow="Case Study · Local Problem">
+    <LovableFrame index={20} eyebrow="Case Study · Local Problem">
       <div className="flex flex-col h-full px-16 pt-28 pb-20">
         <div className="flex items-end justify-between mb-5">
           <div className="max-w-[60%]">

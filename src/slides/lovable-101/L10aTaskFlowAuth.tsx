@@ -41,7 +41,7 @@ function AuthPreview() {
 
 export default function L10aTaskFlowAuth() {
   return (
-    <LovableFrame index={12} eyebrow="Project 02 · Auth in one prompt">
+    <LovableFrame index={15} eyebrow="Project 02 · Auth in one prompt">
       <div className="flex flex-col h-full px-16 pt-28 pb-20">
         <h2 className="text-slide-gray-900 mb-6" style={{ fontSize: '52px', fontWeight: 800, lineHeight: 1 }}>
           Database + login. <span className="text-slide-accent">In one shot.</span>

@@ -18,7 +18,7 @@ const refinements = [
 
 export default function L08Project1Iterate() {
   return (
-    <LovableFrame index={8} eyebrow="Project 01 · Iterate">
+    <LovableFrame index={11} eyebrow="Project 01 · Iterate">
       <div className="flex flex-col h-full px-20 pt-32 pb-24">
         <h2
           className="text-slide-gray-900 tracking-tight mb-10"

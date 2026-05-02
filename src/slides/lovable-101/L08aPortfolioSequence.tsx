@@ -120,7 +120,7 @@ const STAGES = [
 
 export default function L08aPortfolioSequence() {
   return (
-    <LovableFrame index={11} eyebrow="Project 01 · See every refinement">
+    <LovableFrame index={12} eyebrow="Project 01 · See every refinement">
       <div className="flex flex-col h-full px-12 pt-26 pb-16">
         <h2 className="text-slide-gray-900 mb-2" style={{ fontSize: '46px', fontWeight: 800, lineHeight: 1 }}>
           Watch the site <span className="text-slide-accent">grow up.</span>

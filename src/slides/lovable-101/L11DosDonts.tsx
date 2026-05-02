@@ -18,7 +18,7 @@ const donts = [
 
 export default function L11DosDonts() {
   return (
-    <LovableFrame index={21} eyebrow="Pro Moves">
+    <LovableFrame index={23} eyebrow="Pro Moves">
       <div className="flex flex-col h-full px-20 pt-32 pb-24">
         <h2
           className="text-slide-gray-900 tracking-tight mb-12"

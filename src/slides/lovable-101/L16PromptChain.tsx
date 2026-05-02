@@ -63,7 +63,7 @@ const FOLLOWUPS = [
 
 export default function L16PromptChain() {
   return (
-    <LovableFrame index={20} eyebrow="Anatomy of a Real Build">
+    <LovableFrame index={22} eyebrow="Anatomy of a Real Build">
       <div className="flex flex-col h-full px-16 pt-28 pb-16">
         <h2 className="text-slide-gray-900 mb-2" style={{ fontSize: '52px', fontWeight: 800, lineHeight: 1 }}>
           The exact <span className="text-slide-accent">prompt chain.</span>
