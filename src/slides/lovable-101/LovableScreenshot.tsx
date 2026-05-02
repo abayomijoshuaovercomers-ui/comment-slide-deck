@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Copy, Check } from 'lucide-react';
 import lovableLogo from '@/assets/lovable-logo.png';
 
 /**
@@ -14,6 +15,16 @@ interface Props {
 }
 
 export function LovableScreenshot({ prompt, aiReply, preview, url = 'preview.lovable.app', caption }: Props) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    try {
+      await navigator.clipboard.writeText(prompt);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1600);
+    } catch {}
+  };
+
   return (
     <div className="w-full h-full flex flex-col bg-[hsl(220_25%_8%)] border border-white/10 shadow-2xl overflow-hidden">
       {/* Window chrome */}
