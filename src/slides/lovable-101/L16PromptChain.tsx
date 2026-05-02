@@ -104,9 +104,12 @@ export default function L16PromptChain() {
                     {String(i + 2).padStart(2, '0')}
                   </span>
                   <div className="flex-1 min-w-0">
-                    <p className="text-slide-gray-900 mb-1" style={{ fontSize: '14px', fontWeight: 500, lineHeight: 1.35 }}>
-                      {f.p}
-                    </p>
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <p className="text-slide-gray-900" style={{ fontSize: '14px', fontWeight: 500, lineHeight: 1.35 }}>
+                        {f.p}
+                      </p>
+                      <CopyChip text={f.p.replace(/^"|"$/g, '')} />
+                    </div>
                     <p className="text-slide-accent" style={{ fontSize: '12px', fontFamily: 'IBM Plex Mono, monospace' }}>
                       → {f.r}
                     </p>
